@@ -7,6 +7,10 @@ C = Point(-3, -1)
 D = Point(0, 0)
 
 class Launcher:
+    
+    def __init__(self):
+        pass
+
     def show_points():
 
         print("Puntos:")
