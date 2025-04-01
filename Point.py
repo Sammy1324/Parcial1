@@ -1,6 +1,6 @@
 import math
 
-class Punto:
+class Point:
     def __init__(self, x=0, y=0):
         self.x = x
         self.y = y
@@ -8,7 +8,7 @@ class Punto:
     def __str__(self):
         return f"({self.x}, {self.y})"
 
-    def cuadrante(self):
+    def quadrant(self):
         if self.x == 0 and self.y == 0:
             return "El punto está en el origen."
         elif self.x == 0:
@@ -24,10 +24,10 @@ class Punto:
         elif self.x > 0 and self.y < 0:
             return "El punto está en el cuarto cuadrante."
 
-    def vector(self, otro_punto):
-        return (otro_punto.x - self.x, otro_punto.y - self.y)
+    def vector(self, other_point):
+        return (other_point.x - self.x, other_point.y - self.y)
     
-    def distancia(self, otro_punto):
-        otro_punto = Punto(x=int(), y=int())
-        distancia = math.sqrt((otro_punto.x - self.x) ** 2 + (otro_punto.y - self.y) ** 2)
-        return distancia
+    def distance(self, other_point):
+        other_point = Point(x=int(), y=int())
+        distance = math.sqrt((other_point.x - self.x) ** 2 + (other_point.y - self.y) ** 2)
+        return distance

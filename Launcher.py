@@ -1,12 +1,12 @@
-from Punto import Punto
-from Rectangulo import Rectangulo
+from Point import Point
+from Rectangle import Rectangle
 
-A = Punto(2, 3)
-B = Punto(5, 5)
-C = Punto(-3, -1)
-D = Punto(0, 0)
+A = Point(2, 3)
+B = Point(5, 5)
+C = Point(-3, -1)
+D = Point(0, 0)
 
-def mostrar_puntos():
+def show_points():
 
     print("Puntos:")
     print(f"A: {A}")
@@ -14,45 +14,45 @@ def mostrar_puntos():
     print(f"C: {C}")
     print(f"D: {D}")
 
-def mostrar_cuadrantes(A=A, C=C, D=D):
+def show_quadrants(A=A, C=C, D=D):
     print("\nCuadrantes:")
-    print(f"A pertenece al cuadrante: {A.cuadrante()}")
-    print(f"C pertenece al cuadrante: {C.cuadrante()}")
-    print(f"D pertenece al cuadrante: {D.cuadrante()}")
+    print(f"A pertenece al cuadrante: {A.quadrant()}")
+    print(f"C pertenece al cuadrante: {C.quadrant()}")
+    print(f"D pertenece al cuadrante: {D.quadrant()}")
 
-def mostrar_vectores(A=A, B=B):
+def show_vectors(A=A, B=B):
     print("\nVectores:")
     print(f"Vector AB: {A.vector(B)}")
     print(f"Vector BA: {B.vector(A)}")
 
-def mostrar_distancias(A=A, B=B, C=C, D=D):
+def show_distances(A=A, B=B, C=C, D=D):
     print("\nDistancias:")
-    print(f"Distancia entre A y B: {A.distancia(B)}")
-    print(f"Distancia entre B y A: {B.distancia(A)}")
+    print(f"Distancia entre A y B: {A.distance(B)}")
+    print(f"Distancia entre B y A: {B.distance(A)}")
 
-    distancia_A = A.distancia(D)
-    distancia_B = B.distancia(D)
-    distancia_C = C.distancia(D)
+    distance_A = A.distance(D)
+    distance_B = B.distance(D)
+    distance_C = C.distance(D)
 
-    mas_lejos = max(distancia_A, distancia_B, distancia_C)
-    if mas_lejos == distancia_A:
+    farther = max(distance_A, distance_B, distance_C)
+    if farther == distance_A:
         print("\nEl punto más lejos del origen es A.")
-    elif mas_lejos == distancia_B:
+    elif farther == distance_B:
         print("\nEl punto más lejos del origen es B.")
     else:
         print("\nEl punto más lejos del origen es C.")
 
-def mostrar_rectangulo(A=A, B=B):
-    rectangulo = Rectangulo(A, B)
+def show_rectangle(A=A, B=B):
+    rectangle = Rectangle(A, B)
 
     print("\nRectángulo:")
-    print(f"Base: {rectangulo.base()}")
-    print(f"Altura: {rectangulo.altura()}")
-    print(f"Área: {rectangulo.area()}")
+    print(f"Base: {rectangle.basis()}")
+    print(f"Altura: {rectangle.height()}")
+    print(f"Área: {rectangle.area()}")
 
 def main():
-    mostrar_puntos()
-    mostrar_cuadrantes(A, C, D)
-    mostrar_vectores(A, B)
-    mostrar_distancias(A, B, C, D)
-    mostrar_rectangulo(A, B)
+    show_points()
+    show_quadrants(A, C, D)
+    show_vectors(A, B)
+    show_distances(A, B, C, D)
+    show_rectangle(A, B)
